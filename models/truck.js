@@ -1,14 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require('./connection');
 
 global.sampleModel = [];
 
 //Create Schema and Model
 const FreightTruckSchema = new mongoose.Schema({
-    Company: String,
-    Capacity: Number,
-    Location: String,
-    Enroute: Boolean,
-    InUse: Boolean,
+    company: String,
+    capacity: Number,
+    location: String,
+    available: Boolean,
 });
 
 const FreightTruck = mongoose.model('freightTruck', FreightTruckSchema);
@@ -39,4 +38,4 @@ module.exports = {
     addNewTruck,
     updateTruck,
     deleteTruck
-};
+}

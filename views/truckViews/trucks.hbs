@@ -1,0 +1,19 @@
+<h1>Freight Finder</h1>
+<div id="homepage">
+    <h2>Find a Truck for the job!</h2>
+    <form id='search' method="POST" action='/trucks'>
+        <label>Enter your company name:</label>
+        <input type="text" name="company" placeholer="company" required />
+        <label>Enter your truck capacity (lbs):</label>
+        <input type="text" name="capacity" placeholer="capacity" required />
+        <label>Enter your truck location:</label>
+        <input type="text" name="location" placeholer="location" required />
+        <input type="hidden" name="availabilty" placeholer="availability" value='true' required />
+        <input type="submit" value="Add Truck" />
+    </form>
+</div>
+<div id="trucks">
+    {{#each trucks}}
+
+    {{/each}}
+</div>

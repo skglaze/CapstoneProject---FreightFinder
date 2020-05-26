@@ -8,7 +8,7 @@ const truckRouter = express.Router();
 truckRouter.get('/trucks', (req, res) => {
     truckApi.getAllTrucks()
         .then((trucks) => {
-            res.render('trucks', { trucks })
+            res.render('truckViews/trucks', { trucks })
         })
 })
 
@@ -16,7 +16,7 @@ truckRouter.get('/trucks', (req, res) => {
 truckRouter.get('/trucks/:truckId', (req, res) => {
     truckApi.getOneTruck(req.params.truckId)
         .then((truck) => {
-            res.render('truck', { truck })
+            res.render('truckViews/trucks', { truck })
         })
 })
 

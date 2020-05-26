@@ -3,7 +3,7 @@ const express = require('express');
 //set up express app
 const app = express();
 
-const { truckRouter } = require('./controllers/truck')
+const { truckRouter } = require('./controllers/truck.js')
 
 app.use(express.urlencoded({ extended: true }))
 

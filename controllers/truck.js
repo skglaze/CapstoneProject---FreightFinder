@@ -16,7 +16,7 @@ truckRouter.get('/trucks', (req, res) => {
 truckRouter.get('/trucks/:truckId', (req, res) => {
     truckApi.getOneTruck(req.params.truckId)
         .then((truck) => {
-            res.render('truckViews/trucks', { truck })
+            res.render('truckViews/oneTruck', { truck })
         })
 })
 

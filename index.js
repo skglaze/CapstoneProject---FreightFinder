@@ -1,13 +1,17 @@
 const express = require('express');
+const methodOverride = require('method-override');
 
 //set up express app
 const app = express();
 
 const { truckRouter } = require('./controllers/truck.js')
+const { homeRouter } = require('./controllers/home.js')
 
 app.use(express.urlencoded({ extended: true }))
 
 app.use(express.json())
+
+app.use(methodOverride('_method'))
 
 //static files
 app.use(express.static(__dirname + "/public"))
@@ -16,6 +20,7 @@ app.use(express.static(__dirname + "/public"))
 app.set('view engine', 'hbs');
 
 app.use('/', truckRouter)
+app.use('/', homeRouter)
 
 //listen for requests
 app.listen(process.env.PORT || 3000, () => {

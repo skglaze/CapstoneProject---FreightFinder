@@ -1,0 +1,21 @@
+<a href="/">
+    <h1>Freight Finder</h1>
+</a>
+<div id="homepage">
+    <h1>We found a match!</h1>
+    <h2>Available Truck</h2>
+    <p>Company: {{truckMatch.company}}</p>
+    <p>Capacity: {{truckMatch.capacity}}</p>
+    <p>Location: {{truckMatch.location}}</p>
+
+    <h2>Request Information</h2>
+    <p>Company: {{requestMatch.company}}</p>
+    <p>Freight Weight: {{requestMatch.weight}}</p>
+    <p>Pickup Location: {{requestMatch.pickupLocation}}</p>
+    <p>Destination Location: {{requestMatch.destinationLocation}}</p>
+
+    <form action="/matchConfirmation">
+        <input type="submit" value="Accept Match?">
+    </form>
+
+</div>

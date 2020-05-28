@@ -8,6 +8,7 @@ const truckRouter = express.Router();
 truckRouter.get('/trucks', (req, res) => {
     truckApi.getAllTrucks()
         .then((trucks) => {
+            console.log(trucks)
             res.render('truckViews/trucks', { trucks })
         })
 })

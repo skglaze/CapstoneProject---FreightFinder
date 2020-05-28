@@ -6,6 +6,8 @@ const app = express();
 
 const { truckRouter } = require('./controllers/truck.js')
 const { homeRouter } = require('./controllers/home.js')
+const { requestRouter } = require('./controllers/request')
+const { matchRouter } = require('./controllers/match.js')
 
 app.use(express.urlencoded({ extended: true }))
 
@@ -21,6 +23,8 @@ app.set('view engine', 'hbs');
 
 app.use('/', truckRouter)
 app.use('/', homeRouter)
+app.use('/', matchRouter)
+app.use('/', requestRouter)
 
 //listen for requests
 app.listen(process.env.PORT || 3000, () => {

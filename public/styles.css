@@ -1,31 +1,48 @@
 body{
     font-family: Raleway;
     color: rgb(36, 36, 36);
-    background: #ff7474;
+    background: #f8f8f8;
     margin: 10px 30px;
 }
-
+header{
+    background-color: rgb(36, 36, 36);
+    color: #ddd;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    border-radius: 4px;
+    height: 40px;
+    font-weight:600;
+    margin-bottom: 20px;
+}
 #homepage{
-    max-width: 800px;
+    max-width: 700px;
     margin: 60px auto;
     padding: 10px 20px;
     background: #fdfdfd;
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 3px 4px 5px rgba(0,0,0,0.2);
 }
 #home-wrapper-wrapper{
+    background-image: url(./images/truck-landing-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     align-content: center;
     display: flex;
-    justify-content: center;
+    justify-content:left;
+    border-radius: 5px;
+    margin-top: 100px;
 }
 #home-wrapper {
-    width: 950px;
+    width: 850px;
     height: 700px;
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: rgb(243, 242, 242);
+    background-color: rgb(238, 238, 238);
     border-radius: 4px;
+    opacity: .9;
 }
 #home{
     align-content: center;
@@ -93,12 +110,17 @@ ul{
 
 a{
     text-decoration: none;
-    color: #363636;
+    color: rgb(36, 36, 36)
+}
+
+a.options{
+    color: #fff;
 }
 
 #options{
     display: flex;
     justify-content: center;
+    margin-top: 70px;
 }
 #or{
     font-size: 30px;
@@ -126,26 +148,6 @@ li{
     text-align: center;
     font-size: 45px;
 }
-/* span{
-    display: inline-block;
-    margin: 0 20px;
-}
-span.dist{
-    color: green;
-    float: right;
-}
-span.true{
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    background: green;
-}
-span.false{
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    background: #ff5252;
-} */
 button{
     float: right;
     background: green;

@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require('./connection');
 
 global.sampleModel = [];
 
 //create request Schema and Model
 const RequestSchema = new mongoose.Schema({
     company: String,
-    freightWeight: Number,
+    weight: Number,
     pickupLocation: String,
     destinationLocation: String
 })

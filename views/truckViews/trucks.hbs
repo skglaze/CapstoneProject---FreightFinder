@@ -1,4 +1,6 @@
-<h1>Freight Finder</h1>
+<a href="/">
+    <h1>Freight Finder</h1>
+</a>
 <div id="homepage">
     <h2>Please Provide Information about your Truck</h2>
     <form id='search' method="POST" action='/trucks'>
@@ -16,12 +18,14 @@
 <h2>Available Trucks</h2>
 <div id="trucks">
     {{#each trucks}}
-    <a href="/trucks/{{_id}}">
+    {{#if available}}
+    <a href="/trucks/{{_id}}" class="options">
         <li>
             <p><strong>Company: </strong>{{company}}</p>
             <p><strong>Capacity: </strong>{{capacity}}</p>
             <p><strong>Location: </strong>{{location}}</p>
         </li>
     </a>
+    {{/if}}
     {{/each}}
 </div>

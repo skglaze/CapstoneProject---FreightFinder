@@ -1,0 +1,31 @@
+<a href="/">
+    <h1>Freight Finder</h1>
+</a>
+<div id="homepage">
+    <h2>Please Provide Information about your Request</h2>
+    <form id='search' method="POST" action='/requests'>
+        <label>Enter your company name:</label>
+        <input type="text" name="company" placeholer="company" required />
+        <label>Enter your freight's weight (lbs):</label>
+        <input type="text" name="weight" placeholer="weight" required />
+        <label>Enter your freight location:</label>
+        <input type="text" name="pickupLocation" placeholer="pickupLocation" required />
+        <label>Enter your destination:</label>
+        <input type="text" name="destinationLocation" placeholer="destinationLocation" required />
+        <input type="submit" value="Submit Request" />
+    </form>
+</div>
+
+<h2>Current Requests</h2>
+<div id="trucks">
+    {{#each requests}}
+    <a href="/requests/{{_id}}" class="options">
+        <li>
+            <p><strong>Company: </strong>{{company}}</p>
+            <p><strong>Freight Weight: </strong>{{weight}}</p>
+            <p><strong>Pick-up Location: </strong>{{pickupLocation}}</p>
+            <p><strong>Destination: </strong>{{destinationLocation}}</p>
+        </li>
+    </a>
+    {{/each}}
+</div>

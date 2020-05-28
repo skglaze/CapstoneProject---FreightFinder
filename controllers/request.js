@@ -20,14 +20,6 @@ requestRouter.get('/requests/:requestId', (req, res) => {
         })
 })
 
-// //create new request
-// requestRouter.post('/requests', (req, res) => {
-//     requestApi.addNewRequest(req.body)
-//         .then((newRequest) => {
-//             res.redirect('/requests')
-//         })
-// })
-
 //create new request
 requestRouter.post('/requests', (req, res) => {
     requestApi.addNewRequest(req.body)

@@ -14,8 +14,12 @@
     <p>Pickup Location: {{requestMatch.pickupLocation}}</p>
     <p>Destination Location: {{requestMatch.destinationLocation}}</p>
 
-    <form action="/matchConfirmation">
-        <input type="submit" value="Accept Match?">
-    </form>
-
+    <div id='options'>
+        <form action="/matchConfirmation">
+            <input type="submit" value="Accept">
+        </form>
+        <form action="/matchDenied">
+            <input type="submit" value="Decline">
+        </form>
+    </div>
 </div>

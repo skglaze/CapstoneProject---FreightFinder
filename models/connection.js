@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = process.env.MONGODB_URI || 'mongodb+srv://test:test@cluster0-qp860.gcp.mongodb.net/test?retryWrites=true&w=majority';
+const connectionString = process.env.MONGODB_URI || 'mongodb://localhost/freightmover';
 
 mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {

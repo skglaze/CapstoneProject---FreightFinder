@@ -1,0 +1,17 @@
+<h1>Coming Soon</h1>
+<div id="homepage">
+    <h2>Geolocation Tracking</h2>
+    <div id="googleMap" style="width:700px;height:500px;"></div>
+
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(33.8138079, -84.3169484),
+                zoom: 15,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ1TOMZUpR_VXhEcO9feuYiTC62ODrV-I&callback=myMap"></script>
+</div>
